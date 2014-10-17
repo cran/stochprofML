@@ -7,6 +7,7 @@ exportPattern(stochprof.search.LNLN,stochprof.search.rLNLN,stochprof.search.EXPL
               penalty.constraint.LNLN,penalty.constraint.rLNLN,penalty.constraint.EXPLN,
               analyze.toycluster,
               analyze.sod2,
-              generate.toydata)
+              generate.toydata,
+              stochasticProfilingData,stochasticProfilingML)
 importFrom(numDeriv, hessian)              
 importFrom(MASS, ginv)              

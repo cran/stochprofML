@@ -1,6 +1,6 @@
 stochprof.logit <-
 function(x,u=0,v=1) {
-# The logit function, which maps numbers x from the interval [u,v] the real line:
+# The logit function, which maps numbers x from the interval [u,v] to the real line:
 #
 # logit(x) = log((x-u)/(v-x))     for x in [u,v].
 #                    

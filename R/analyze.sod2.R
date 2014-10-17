@@ -7,8 +7,10 @@ function(model="LN-LN",TY=2,use.constraints=F) {
    
    # definition of variables (necessary for CMD R check)
    # (these variables will be initialized later, but they are not visible as global functions/data)
-   d.sum.of.mixtures <- NULL  
+   d.sum.of.mixtures <- NULL
+   sod2 <- NULL  
    rm(d.sum.of.mixtures)   
+   rm(sod2)
    
    # model has to be defined
    if (!(model %in% c("LN-LN","rLN-LN","EXP-LN"))) {
