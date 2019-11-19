@@ -7,7 +7,7 @@ Analysis of toyclusters in stochastic profiling model
 Estimation of the model parameters for the 12-gene toyclusters provided in this package. This is done in three steps: an optional preanalysis of the single genes, an analysis of three 4-gene subclusters, and finally the analysis of the entire 12-gene cluster.
 }
 \usage{
-analyze.toycluster(model = "LN-LN", data.model = "LN-LN", TY = 2, 
+analyze.toycluster(model = "LN-LN", data.model = "LN-LN", TY = 2,
    preanalyze = T, show.plots = T, use.constraints = F)
 }
 \arguments{
@@ -34,7 +34,7 @@ if TRUE, constraints on the individual population densities are applied; see \co
 This function carries out estimation of the model parameters for the \code{toycluster.LNLN}, \cr
 \code{toycluster.rLNLN} or \code{toycluster.EXPLN} dataset. This contains perfectly observed measurements for 12 genes and 16 tissue samples, assuming 10-cell samplings and two different types of cells. The true underlying parameters are given on the help page for the datasets.
 
-The estimation is performed in three steps: 
+The estimation is performed in three steps:
 
 In an optional preanalysis (carried out if preanalyze is TRUE), each gene is considered individually, i.e. for each gene the parameters are estimated (these are p, mu_1, mu_2 and sigma for LN-LN, p, mu_1, mu_2, sigma_1 and sigma_2 for rLN-LN, and p, mu, sigma and lambda for EXP-LN). This gives a rough idea about the location of the parameters at computationally low cost. This might speed up the analysis of the larger clusters. From the confidence intervals of the single-gene estimates, one can construct appropriate parameter ranges for the following step.
 
@@ -48,7 +48,7 @@ show.plots is TRUE, graphically displayed.
 \value{
 The final result for the chosen 12-gene cluster. That is a list as returned by \code{stochprof.loop}, i.e. the following components:
 \item{mle}{maximum likelihood estimate}
-\item{loglikeli}{value of the log-likelihood function at maximum likelihood estimate}
+\item{neg-loglikeli}{value of the negative log-likelihood function at maximum likelihood estimate}
 \item{ci}{approximate marginal maximum likelihood confidence intervals for the maximum likelihood estimate}
 \item{pargrid}{matrix containing parameter combinations and according values of the target function}
 \item{bic}{Bayesian information criterion value}
@@ -56,15 +56,14 @@ The final result for the chosen 12-gene cluster. That is a list as returned by \
 \item{pen}{penalization for densities not fulfilling required constraints. If \code{use.constraints} is FALSE, this has no practical meaning. If \code{use.constraints} is TRUE, this value is included in \code{loglikeli}.}
 }
 \references{
-"Parameterizing cell-to-cell regulatory heterogeneities via stochastic transcriptional profiles" by Sameer S Bajikar*, Christiane Fuchs*, Andreas Roller, Fabian J Theis^ and Kevin A Janes^: PNAS 2014, 111(5), E626-635 (* joint first authors, ^ joint last authors)
+"Parameterizing cell-to-cell regulatory heterogeneities via stochastic transcriptional profiles" by Sameer S Bajikar*, Christiane Fuchs*, Andreas Roller, Fabian J Theis^ and Kevin A Janes^: PNAS 2014, 111(5), E626-635 (* joint first authors, ^ joint last authors) <doi:10.1073/pnas.1311647111>
+"Pheno-seq - linking visual
+  features and gene expression in 3D cell culture systems" by Stephan M. Tirier, Jeongbin Park, Friedrich Preusser, Lisa Amrhein, Zuguang Gu, Simon Steiger, Jan-Philipp Mallm, Teresa Krieger, Marcel Waschow, Bjoern Eismann, Marta Gut, Ivo G. Gut, Karsten Rippe, Matthias Schlesner, Fabian Theis, Christiane Fuchs, Claudia R. Ball, Hanno Glimm, Roland Eils & Christian Conrad: Sci Rep 9, 12367 (2019) <doi:10.1038/s41598-019-48771-4>
 }
 \author{
-Christiane Fuchs
+Lisa Amrhein, Christiane Fuchs
 
-Maintainer: Christiane Fuchs <christiane.fuchs@helmholtz-muenchen.de>
-}
-\note{
-Executing this function as it is (i.e. without any parallelization) takes approx. 1-2 hours (LN-LN model), 1-3 hours (rLN-LN model) or 1 day (EXP-LN model) on a standard computer.
+Maintainer: Lisa Amrhein <amrheinlisa@gmail.com>
 }
 \keyword{ stochastic profiling }
 \keyword{ synthetic data }

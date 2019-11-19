@@ -4,12 +4,12 @@
 Maximum likelihood estimation for the parameters in the stochastic profiling model
 }
 \description{
-Maximum likelihood estimation for the parameters in the stochastic profiling model. Because the log-likelihood function is potentially multimodal, no straightforward use of gradient-based approaches for finding globally optimal parameter combinations is possible. To tackle this challenge, this function performs a two-step estimation procedure. 
+Maximum likelihood estimation for the parameters in the stochastic profiling model. Because the log-likelihood function is potentially multimodal, no straightforward use of gradient-based approaches for finding globally optimal parameter combinations is possible. To tackle this challenge, this function performs a two-step estimation procedure.
 }
 \usage{
-stochprof.loop(model, dataset, n, TY, genenames = NULL, fix.mu = F, 
-   fixed.mu, par.range = NULL, prev.result = NULL, loops = 5, 
-   until.convergence = T, print.output = T, show.plots = T, 
+stochprof.loop(model, dataset, n, TY, genenames = NULL, fix.mu = F,
+   fixed.mu, par.range = NULL, prev.result = NULL, loops = 5,
+   until.convergence = T, print.output = T, show.plots = T,
    plot.title = "", pdf.file, use.constraints = F, subgroups)
 }
 \arguments{
@@ -20,7 +20,7 @@ model for which one wishes to estimate the parameters: "LN-LN", "rLN-LN" or "EXP
 matrix which contains the cumulated expression data over all cells in a tissue sample. Columns represent different genes, rows represent different tissue samples.
 }
   \item{n}{
-number of cells taken from each tissue sample
+number of cells taken from each tissue sample. This can also be a vector stating how many cells are in each sample seperatly.
 }
   \item{TY}{
 number of types of cells that is assumed in the stochastic model
@@ -34,8 +34,8 @@ if TRUE, the log-means of the lognormal distributions are kept fixed in the esti
   \item{fixed.mu}{
 vector containing the values to which the log-means should be fixed if fix.mu==T. The order of components is as follows:
 
-(mu_type_1_gene_1, mu_type_1_gene_2, ..., 
- 
+(mu_type_1_gene_1, mu_type_1_gene_2, ...,
+
  mu_type_2_gene_1, mu_type_2_gene_2, ...).
 
 This argument needs to be specified only when fix.mu==T.
@@ -69,7 +69,7 @@ if TRUE, constraints on the individual population densities are applied; see \co
 }
   \item{subgroups}{
 list of sets of gene numbers. This parameter should be given only when the present call of \code{stochprof.loop} is based on a subanalysis of the subgroups of genes with non-fixed mu. The parameter is used only for calculation of the adjusted BIC which takes into account the number of parameters that had to be estimated during the whole estimation procedure: First, for each of the subclusters, and then for the final analysis.
-}  
+}
 }
 \details{
 This function carries out maximum likelihood estimation for the parameters of the stochastic profiling model. Because the log-likelihood function is potentially multimodal, no straightforward use of gradient-based approaches for finding globally optimal parameter combinations is possible. To tackle this challenge, this function performs a two-step estimation procedure: First, it computes the log-likelihood function at randomly drawn parameter combinations to identify high-likelihood regions in parameter space at computationally  low cost. Then, it uses the Nelder-Mead algorithm to identify local maxima of the likelihood function. The starting values for this algorithm are randomly drawn from the high-likelihood regions determined in the first step. To further localize the global optimum, the function again performs grid searches of the parameter space, this time around the optimum identified by the Nelder-Mead algorithm. This search creates another space to identify high-likelihood regions, which are then used to seed another Nelder-Mead optimization.
@@ -77,7 +77,7 @@ This function carries out maximum likelihood estimation for the parameters of th
 \value{
 A list with the following components:
 \item{mle}{maximum likelihood estimate}
-\item{loglikeli}{value of the log-likelihood function at maximum likelihood estimate}
+\item{neg-loglikeli}{value of the negative log-likelihood function at maximum likelihood estimate}
 \item{ci}{approximate marginal maximum likelihood confidence intervals for the maximum likelihood estimate}
 \item{pargrid}{matrix containing parameter combinations and according values of the target function}
 \item{bic}{Bayesian information criterion value}
@@ -85,10 +85,14 @@ A list with the following components:
 \item{pen}{penalization for densities not fulfilling required constraints. If \code{use.constraints} is FALSE, this has no practical meaning. If \code{use.constraints} is TRUE, this value is included in \code{loglikeli}.}
 }
 \references{
-"Parameterizing cell-to-cell regulatory heterogeneities via stochastic transcriptional profiles" by Sameer S Bajikar*, Christiane Fuchs*, Andreas Roller, Fabian J Theis^ and Kevin A Janes^: PNAS 2014, 111(5), E626-635 (* joint first authors, ^ joint last authors)
+"Parameterizing cell-to-cell regulatory heterogeneities via stochastic transcriptional profiles" by Sameer S Bajikar*, Christiane Fuchs*, Andreas Roller, Fabian J Theis^ and Kevin A Janes^: PNAS 2014, 111(5), E626-635 (* joint first authors, ^ joint last authors) <doi:10.1073/pnas.1311647111>
+"Pheno-seq - linking visual
+  features and gene expression in 3D cell culture systems" by Stephan M. Tirier, Jeongbin Park, Friedrich Preusser, Lisa Amrhein, Zuguang Gu, Simon Steiger, Jan-Philipp Mallm, Teresa Krieger, Marcel Waschow, Bjoern Eismann, Marta Gut, Ivo G. Gut, Karsten Rippe, Matthias Schlesner, Fabian Theis, Christiane Fuchs, Claudia R. Ball, Hanno Glimm, Roland Eils & Christian Conrad: Sci Rep 9, 12367 (2019) <doi:10.1038/s41598-019-48771-4>
 }
 \author{
-Christiane Fuchs
+Lisa Amrhein, Christiane Fuchs
+
+Maintainer: Lisa Amrhein <amrheinlisa@gmail.com>
 }
 \keyword{ maximum likelihood estimation }
 \keyword{ stochastic profiling }

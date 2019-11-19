@@ -8,9 +8,9 @@ Sums of mixtures of zero, one or more lognormal random variables and one exponen
 Density and random generation of a sum of i.i.d. random variables, where each random variable is from the following mixture distribution: With probability p_i, it is of type i. For all but the largest i, it is lognormally distributed with log-mean mu_i and log-standard deviation sigma_i. Otherwise it is exponentially distributed with rate lambda.
 }
 \usage{
-d.sum.of.mixtures.EXPLN(y, n, p.vector, mu.vector, sigma.vector, lambda, 
+d.sum.of.mixtures.EXPLN(y, n, p.vector, mu.vector, sigma.vector, lambda,
    logdens = T)
-r.sum.of.mixtures.EXPLN(k, n, p.vector, mu.vector, sigma.vector, lambda)
+r.sum.of.mixtures.EXPLN(k, n, p.vector, mu.vector, sigma.vector, lambda, N.matrix)
 }
 \arguments{
   \item{y}{
@@ -20,10 +20,9 @@ the argument at which the density is evaluated
 number of i.i.d. random variables returned by this function (in the considered application: number of tissue samples)
 }
   \item{n}{
-the number of random variables entering each sum (in the considered application: number of cells per tissue sample)
+the number of random variables entering each sum (in the considered application: number of cells per tissue sample). This can also be a vector stating how many cells are in each sample separatly.
 }
   \item{p.vector}{
-vector (p1,p2,..,pT) containing the probabilities for each type of cell. Its elements have to sum up to one
 }
   \item{mu.vector}{
 vector (mu1,mu2,...,mu(T-1)) containing the log-means for each lognormal type (types 1 to T-1)
@@ -37,6 +36,9 @@ the rate for the exponential type (type T)
   \item{logdens}{
 if TRUE, the log of the density is returned
 }
+  \item{N.matrix}{
+optional. Matrix, that shows the decomposition of samples to be generated. Each row stands for a future sample and the columns show the decomposition of types for the specific sample such that the row sum should be n (either a value, i.e. all the same or a vector).
+}
 }
 \details{
 The lengths of mu.vector and sigma.vector have to be identical. p.vector has to have one component more. Its length automatically determines the number of different types. lambda has to be a scalar.
@@ -45,10 +47,14 @@ The lengths of mu.vector and sigma.vector have to be identical. p.vector has to 
 'd.sum.of.mixtures.EXPLN' gives the density, and 'r.sum.of.mixtures.EXPLN' generates random variables.
 }
 \references{
-"Parameterizing cell-to-cell regulatory heterogeneities via stochastic transcriptional profiles" by Sameer S Bajikar*, Christiane Fuchs*, Andreas Roller, Fabian J Theis^ and Kevin A Janes^: PNAS 2014, 111(5), E626-635 (* joint first authors, ^ joint last authors)
+"Parameterizing cell-to-cell regulatory heterogeneities via stochastic transcriptional profiles" by Sameer S Bajikar*, Christiane Fuchs*, Andreas Roller, Fabian J Theis^ and Kevin A Janes^: PNAS 2014, 111(5), E626-635 (* joint first authors, ^ joint last authors) <doi:10.1073/pnas.1311647111>
+"Pheno-seq - linking visual
+  features and gene expression in 3D cell culture systems" by Stephan M. Tirier, Jeongbin Park, Friedrich Preusser, Lisa Amrhein, Zuguang Gu, Simon Steiger, Jan-Philipp Mallm, Teresa Krieger, Marcel Waschow, Bjoern Eismann, Marta Gut, Ivo G. Gut, Karsten Rippe, Matthias Schlesner, Fabian Theis, Christiane Fuchs, Claudia R. Ball, Hanno Glimm, Roland Eils & Christian Conrad: Sci Rep 9, 12367 (2019) <doi:10.1038/s41598-019-48771-4>
 }
 \author{
-Christiane Fuchs
+Lisa Amrhein, Christiane Fuchs
+
+Maintainer: Lisa Amrhein <amrheinlisa@gmail.com>
 }
 \examples{
 # generate random variables
