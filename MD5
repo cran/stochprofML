@@ -1,6 +1,6 @@
-64816e4bae9dd9f9a5e9e151f7b91e9a *DESCRIPTION
+fd52f7023ee290ef93f1d23b820793d1 *DESCRIPTION
 2cfdd0c489bcbf7d694673e4f3b88fa6 *NAMESPACE
-e746261e19e7cff61f3973ad99d93ea9 *NEWS.md
+91582d1b2bff7da181ae7180d5705faa *NEWS.md
 56289e7f4b28309505f1303da0fb3545 *R/analyze.sod2.R
 53341a075c3993811445d7bff10b15ac *R/analyze.toycluster.R
 4060331a02c5f358c341a3b50c5ef677 *R/backtransform.par.EXPLN.R
@@ -26,9 +26,9 @@ aaa2b098b8ba9ca8ec69e3ead007bb6e *R/generate.toydata.R
 8caf46ed782e2849fcd3c7de7fa645b2 *R/get.range.LNLN.R
 1b426fea0957006bf67672bb00fb6548 *R/get.range.rLNLN.R
 e297ebacfd3b2a55ae85b689cc6c69fe *R/lognormal.exp.convolution.R
-b80c1faf759fe32bf36c8a168ef15c1e *R/mix.d.sum.of.mixtures.EXPLN.R
-d553e0d6db1e38dc829d6de1750009fa *R/mix.d.sum.of.mixtures.LNLN.R
-d28b55fe64cbbb9288590adca189f915 *R/mix.d.sum.of.mixtures.rLNLN.R
+a09aacbc4c3bceed09d307bd038d7322 *R/mix.d.sum.of.mixtures.EXPLN.R
+99a670f776c3bdff2947a5ad7e87ddf8 *R/mix.d.sum.of.mixtures.LNLN.R
+ce40a2347543ede44b1299292792c546 *R/mix.d.sum.of.mixtures.rLNLN.R
 969bf02b2311ce813056a0899a332029 *R/penalty.constraint.EXPLN.R
 5bf25baa22ef73658f874509078e759c *R/penalty.constraint.LNLN.R
 a81d163aa899b0d0bc59b264b94985dc *R/penalty.constraint.rLNLN.R
@@ -36,7 +36,7 @@ ae119595d2c6ab5b0133ca57868e0ea1 *R/r.sum.of.mixtures.EXPLN.R
 b6f3ec9f73cf1f2e1dc71330ac5bcd8d *R/r.sum.of.mixtures.LNLN.R
 78f0d95b39c2e3cae8f7dc3607f85978 *R/r.sum.of.mixtures.rLNLN.R
 fa3cf72378d3a53195da18acd86f2d6a *R/set.model.functions.R
-e032a4d7ec8e610809a4c7a5706273b5 *R/stochasticProfilingData.R
+516af315963c1905aacc798e8f851dba *R/stochasticProfilingData.R
 8e2f0d99c7be4a6c4eadfe79a35e8838 *R/stochasticProfilingML.R
 256dff0f23d23eba44b82e227e30d678 *R/stochprof.expit.R
 216145c9d543dc57ecc78a0672280acb *R/stochprof.logit.R
@@ -65,9 +65,9 @@ d365e19e88de18bab41744d3f815a9d5 *man/d.sum.of.mixtures.EXPLN.Rd
 dc99b9a5c3d7afbde52e84c1613b80e5 *man/d.sum.of.mixtures.LNLN.Rd
 43b3f754d5f836c3499cae2697e2ddf2 *man/d.sum.of.mixtures.rLNLN.Rd
 62c4221b0ff319760b46db6663a47a2c *man/generate.toydata.Rd
-fbf8e918a6af2af7b64e1e8a30a0ef72 *man/mix.d.sum.of.mixtures.EXPLN.Rd
-4111bc9374a6285eeb1d1c26d3073da8 *man/mix.d.sum.of.mixtures.LNLN.Rd
-6525ee1da8410399a7ef0947278a7328 *man/mix.d.sum.of.mixtures.rLNLN.Rd
+9467a2957abadb0ce8ffcfd25d59ac20 *man/mix.d.sum.of.mixtures.EXPLN.Rd
+92dee8cacd3e6a43829d021680a83605 *man/mix.d.sum.of.mixtures.LNLN.Rd
+05f257f3094e159c771504a00aec50db *man/mix.d.sum.of.mixtures.rLNLN.Rd
 ad19acb6088b9c0011c9a808437a6b2d *man/penalty.constraint.EXPLN.Rd
 5de26dc49c9ce034dd267a812ad171aa *man/penalty.constraint.LNLN.Rd
 bcfc27b46c05dc18e42bf8b7744734ea *man/penalty.constraint.rLNLN.Rd
