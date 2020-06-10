@@ -1,6 +1,6 @@
-2af8f13b028561f4578de31f5fd0ed3d *DESCRIPTION
-2cfdd0c489bcbf7d694673e4f3b88fa6 *NAMESPACE
-1dcde43c5284a34f7573965bd5a12e95 *NEWS.md
+1a762d19d66260f034165defdec814c0 *DESCRIPTION
+7b3f4d60a265071e07ea475b651cc87a *NAMESPACE
+fa3302f28e17a613ae55a8e366fc56f9 *NEWS.md
 56289e7f4b28309505f1303da0fb3545 *R/analyze.sod2.R
 53341a075c3993811445d7bff10b15ac *R/analyze.toycluster.R
 4060331a02c5f358c341a3b50c5ef677 *R/backtransform.par.EXPLN.R
@@ -41,9 +41,9 @@ fa3cf72378d3a53195da18acd86f2d6a *R/set.model.functions.R
 256dff0f23d23eba44b82e227e30d678 *R/stochprof.expit.R
 216145c9d543dc57ecc78a0672280acb *R/stochprof.logit.R
 6bb2d1131336fef25d3423befea6e914 *R/stochprof.loop.R
-e5cf36f01757f9a8839653b2e4142a33 *R/stochprof.results.EXPLN.R
-ccabb33b0f9e3326972f8116ae20b0e3 *R/stochprof.results.LNLN.R
-c43a4cace41c4917317c49aac15bc949 *R/stochprof.results.rLNLN.R
+404c5b3500e279a330a08ee4b7d0d1ab *R/stochprof.results.EXPLN.R
+5218ac43d5ad7dd2f3b419e2207996c7 *R/stochprof.results.LNLN.R
+efceb0525a61cf16b33b22d75e7b2b21 *R/stochprof.results.rLNLN.R
 5d26805234d1082f91cf545c70046aa1 *R/stochprof.search.EXPLN.R
 5d4f9a2bb772bd83e7e81b20e09d35fb *R/stochprof.search.LNLN.R
 6aedd6780ba388cd6ce860b6ff2dcaf6 *R/stochprof.search.rLNLN.R
@@ -61,9 +61,9 @@ f9b44098a5b1d0c2b2ec60329afb14b1 *man/analyze.toycluster.Rd
 8cd62d0d4552eac6c5e4047c0d4f62b4 *man/calculate.ci.LNLN.Rd
 996497026b64a7a11ae21b3a73073020 *man/calculate.ci.rLNLN.Rd
 2a684528a35ead2fbfc5968c389e80e4 *man/comb.summands.Rd
-f52717b5e6ac715f9ce75fd580ef7947 *man/d.sum.of.mixtures.EXPLN.Rd
-b7350f5ee2423bebf92afc3a39ec0d74 *man/d.sum.of.mixtures.LNLN.Rd
-b14942978b8469d3bc6b13f55a5a42c7 *man/d.sum.of.mixtures.rLNLN.Rd
+7782656b08b20ed874356a051b838fc2 *man/d.sum.of.mixtures.EXPLN.Rd
+04c4b8a8a6a7ab548d402bf5cf403e57 *man/d.sum.of.mixtures.LNLN.Rd
+4f0f082a4e0a3f75e619dd4cf5892569 *man/d.sum.of.mixtures.rLNLN.Rd
 ab660f1ec69e88493e2838b5c58f01e9 *man/generate.toydata.Rd
 7dae1990c4f1e382fbd541a43a0bc7b4 *man/mix.d.sum.of.mixtures.EXPLN.Rd
 3e2ed0aed446450264f3606ea45dd52f *man/mix.d.sum.of.mixtures.LNLN.Rd
@@ -71,6 +71,7 @@ c25439617f1a81be6477d86339cf3343 *man/mix.d.sum.of.mixtures.rLNLN.Rd
 cacbd5195a145b06368ff6599efd3354 *man/penalty.constraint.EXPLN.Rd
 6f4d9ec7652d1af94de2f7a2bcf42ad9 *man/penalty.constraint.LNLN.Rd
 9839806941a735f2db905859b3efbe08 *man/penalty.constraint.rLNLN.Rd
+bc834f5e8bfa47ec412e934b7ca57900 *man/set.model.functions.Rd
 2a84a0f4f01241fb694ff1a58b2cec76 *man/sod2.Rd
 dbc76b8ecc255164923188e3b43801fa *man/stochasticProfilingData.Rd
 20a7fcd874ddde680c801d955da39607 *man/stochasticProfilingML.Rd
